@@ -1,9 +1,7 @@
-package com.qa.swagLabs.stepDefinitions;
+package com.qa.swagLabs.stepdefinitions;
 
 import com.qa.swagLabs.factory.PlaywrightFactory;
-import com.qa.swagLabs.pages.HomePage;
 import com.qa.swagLabs.pages.ProductPage;
-import com.qa.swagLabs.utils.ConfigReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

@@ -1,13 +1,9 @@
-package com.qa.swagLabs.testRunner;
+package com.qa.swagLabs.testrunner;
 
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-
-import java.io.File;
-import java.lang.module.Configuration;
-import java.util.List;
 
 
 @RunWith(Cucumber.class)

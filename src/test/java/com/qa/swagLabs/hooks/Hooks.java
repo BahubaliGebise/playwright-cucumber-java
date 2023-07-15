@@ -4,6 +4,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Tracing;
 import com.qa.swagLabs.factory.PlaywrightFactory;
 
+import com.qa.swagLabs.utils.ConfigReader;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -21,7 +22,7 @@ public class Hooks {
     @Before("@UI")
     public void launchBrowser() {
         pf = new PlaywrightFactory();
-        String browserName = System.getProperty("browserNm").toLowerCase();
+        String browserName = ConfigReader.getProperty("browserNm").toLowerCase();
         System.out.println(browserName);
         if (browserName.isEmpty()) {
             System.out.println("Pass valid browser name");

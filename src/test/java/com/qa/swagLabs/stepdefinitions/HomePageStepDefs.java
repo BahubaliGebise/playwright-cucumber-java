@@ -1,4 +1,4 @@
-package com.qa.swagLabs.stepDefinitions;
+package com.qa.swagLabs.stepdefinitions;
 
 import com.qa.swagLabs.factory.PlaywrightFactory;
 import com.qa.swagLabs.pages.HomePage;
@@ -11,13 +11,13 @@ import org.junit.Assert;
 
 public class HomePageStepDefs {
     HomePage homePage = new HomePage(PlaywrightFactory.getPage());
-    @Given("^I land on HomePage$")
+    @Given("^User able to launch application$")
     public void iLandOnHomePage() {
         homePage.navigateToURL();
         Assert.assertTrue("I am on wrong page", homePage.getHomePageTitle().equalsIgnoreCase("Swag Labs"));
     }
 
-    @When("^I enter login details$")
+    @When("^User enter login details$")
     public void iEnterLoginDetails() {
         System.out.println("Username:  "+ConfigReader.getProperty("username"));
         System.out.println("Password:  "+ConfigReader.getProperty("password"));
@@ -26,7 +26,7 @@ public class HomePageStepDefs {
 
     }
 
-    @Then("^I land to ProductPage$")
+    @Then("^Verify login successful at ProductPage$")
     public void iLandToProductPage() {
         homePage.navigateToProductPage();
     }
