@@ -5,5 +5,8 @@ Feature: I should be able to do product checkouts
     Given User able to launch application
     When User enter login details
     Then Verify login successful at ProductPage
-    When I see Backpack product
-    Then I add Backpack to Cart
+    When User see Backpack product
+    Then User add Backpack to Cart
+    Then User able to navigate to customer
+    And User provides customer details
+       | BAHUBALI | INDIA |1234GP|
