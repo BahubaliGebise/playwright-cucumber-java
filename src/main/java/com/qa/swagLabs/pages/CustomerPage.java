@@ -31,4 +31,6 @@ public class CustomerPage {
         continueBtn.click();
     }
 
+
+
 }

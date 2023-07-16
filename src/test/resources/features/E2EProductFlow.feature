@@ -9,4 +9,6 @@ Feature: I should be able to do product checkouts
     Then User add Backpack to Cart
     Then User able to navigate to customer
     And User provides customer details
-       | BAHUBALI | INDIA |1234GP|
+       | BAHUBALI | INDIA | 1234GP |
+    Then User verify over page details and confirmation
+
