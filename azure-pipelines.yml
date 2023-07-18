@@ -25,10 +25,16 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean verify'
     options: '-Dcucumber.filter.tags="@UI" -DbrowserName="chromium" -Dheadless="true"'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      ls -ltr
 - task: PublishCucumberReport@1
   inputs:
     jsonDir: '$(System.DefaultWorkingDirectory)'
-    outputPath: '$(System.DefaultWorkingDirectory)/target'
+    outputPath: '$(System.DefaultWorkingDirectory)/target/cucumber'
     theme: 'bootstrap'
     reportSuiteAsScenarios: true
     name: 'Playwright-cucumber-html-report'
