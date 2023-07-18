@@ -25,7 +25,7 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean verify'
     options: '-Dcucumber.filter.tags="@UI" -DbrowserName="chromium" -Dheadless="true"'
-
+  condition: succeeded()
 - task: PublishCucumberReport@1
   inputs:
     jsonDir: 'target/cucumber-report'
@@ -34,5 +34,5 @@ steps:
     reportSuiteAsScenarios: true
     name: 'Playwright-cucumber-html-report'
     title: 'Playwright-java-cucumber-html-report'
-
+  condition: succeededOrFailed()
 
