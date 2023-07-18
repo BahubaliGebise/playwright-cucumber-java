@@ -7,9 +7,13 @@ trigger:
 - main
 
 pool:
-  vmImage: windows-latest
+  vmImage: 'ubuntu-latest'
 
 steps:
+- task: NodeTool@0
+  displayName: 'Install Node 18.x'
+  inputs:
+    versionSpec: 18.x
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
