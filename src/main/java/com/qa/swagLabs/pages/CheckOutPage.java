@@ -10,7 +10,7 @@ public class CheckOutPage {
 
     public CheckOutPage(Page page) {
         this.page = page;
-        this.checkoutBtn = page.locator("//*[@id=\"checkout\"]");
+        this.checkoutBtn = page.locator("//*[@id=\"checkouttttt\"]");
     }
 
     // 3. page actions/methods:
