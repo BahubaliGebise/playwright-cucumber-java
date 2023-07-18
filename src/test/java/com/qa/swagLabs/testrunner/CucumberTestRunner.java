@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features ="src/test/resources/features",
         glue= {"com/qa/swagLabs"},
-        plugin={"me.jvt.cucumber.report.PrettyReports:target","pretty"},
+        plugin={"json:target/cucumber-report/cucumber.json","me.jvt.cucumber.report.PrettyReports:target","pretty"},
         monochrome = true
 )
 
