@@ -15,8 +15,18 @@ steps:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: 'JDK 17'
+    jdkVersionOption: '1.17'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: PublishCucumberReport@1
+  inputs:
+    jsonDir: '$(System.DefaultWorkingDirectory)'
+    outputPath: '$(System.DefaultWorkingDirectory)'
+    theme: 'bootstrap'
+    reportSuiteAsScenarios: true
+    name: 'Playwright-cucumber-html-report'
+    title: 'Playwright-java-cucumber-html-report'
+
+
